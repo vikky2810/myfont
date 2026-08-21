@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viks — a handwriting font</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <span class="theme-icon">☾</span>
+  </button>
+
+  <header class="hero">
+    <p class="eyebrow">a typeface, handmade</p>
+    <h1 class="hero-title">Viks</h1>
+    <p class="hero-sub">My handwriting, turned into a font you can type with.</p>
+
+    <a class="hero-cta" href="fonts/Viks-Regular.otf" download>
+      <span class="cta-icon">↓</span> Download the font
+    </a>
+    <p class="hero-cta-note">otf, small file, free to use</p>
+
+    <div class="hero-line"></div>
+  </header>
+
+  <main>
+
+    <!-- Type tester -->
+    <section class="panel" id="tester">
+      <h2 class="section-title">Type something</h2>
+
+      <div class="tester-box">
+        <div class="tester-output" id="output" contenteditable="true" spellcheck="false">Hello, this is my handwriting.</div>
+      </div>
+
+      <p class="warn" id="warn" hidden></p>
+
+      <div class="controls">
+        <label class="control">
+          <span class="control-label">Size <b id="sizeVal">64</b></span>
+          <input type="range" id="sizeRange" min="20" max="140" value="64">
+        </label>
+
+        <label class="control">
+          <span class="control-label">Letter spacing <b id="trackVal">0</b></span>
+          <input type="range" id="trackRange" min="-5" max="20" value="0">
+        </label>
+
+        <label class="control">
+          <span class="control-label">Line height <b id="leadVal">1.3</b></span>
+          <input type="range" id="leadRange" min="90" max="220" value="130">
+        </label>
+
+        <div class="control control-buttons">
+          <span class="control-label">Align</span>
+          <div class="btn-row" id="alignRow">
+            <button class="btn is-active" data-align="left">left</button>
+            <button class="btn" data-align="center">center</button>
+            <button class="btn" data-align="right">right</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Character set -->
+    <section class="panel">
+      <h2 class="section-title">Every letter</h2>
+      <p class="section-note">Click any glyph to add it to the sample above.</p>
+      <div class="glyphs" id="glyphs"></div>
+    </section>
+
+    <!-- Size specimen -->
+    <section class="panel">
+      <h2 class="section-title">At every size</h2>
+      <div class="specimen">
+        <p class="spec-row" style="font-size: 3.4rem">Sphinx of black quartz</p>
+        <p class="spec-row" style="font-size: 2.4rem">Pack my box with five dozen jugs</p>
+        <p class="spec-row" style="font-size: 1.7rem">The quick brown fox jumps over the lazy dog</p>
+        <p class="spec-row" style="font-size: 1.15rem">How vexingly quick daft zebras jump! Waltz, bad nymph, for quick jigs vex.</p>
+      </div>
+    </section>
+
+    <!-- Pull quote -->
+    <section class="quote-block">
+      <blockquote>
+        <p>Handwriting is the closest thing we have to a fingerprint you can read.</p>
+      </blockquote>
+    </section>
+
+    <!-- Cards -->
+    <section class="panel">
+      <h2 class="section-title">Where it works</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Notes</h3>
+          <p>Titles, margins, little reminders to yourself. It reads like paper.</p>
+        </article>
+        <article class="card">
+          <h3>Signatures</h3>
+          <p>Sign off a letter, a poster, a portfolio, without scanning anything.</p>
+        </article>
+        <article class="card">
+          <h3>Headlines</h3>
+          <p>Big and loose. Pair it with a plain sans for anything long.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Honest limits -->
+    <section class="panel">
+      <h2 class="section-title">What it can and cannot do</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Has</h3>
+          <p class="mono-note">A to Z, a to z, and the marks: ! " ' , . : ; ?</p>
+        </article>
+        <article class="card">
+          <h3>Missing</h3>
+          <p class="mono-note">Digits, hyphen, parentheses, slash, @ and &amp;. They fall back to a plain sans.</p>
+        </article>
+        <article class="card">
+          <h3>Fix</h3>
+          <p class="mono-note">Draw the missing tiles in Calligraphr and export again.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section class="panel" id="download">
+      <h2 class="section-title">Take it with you</h2>
+      <p class="section-note">Same font, three formats. Pick the one your tool wants.</p>
+
+      <div class="dl-grid">
+        <a class="dl-btn" href="fonts/Viks-Regular.otf" download>
+          <span class="dl-fmt">OTF</span>
+          <span class="dl-for">Install on your computer</span>
+          <span class="dl-size">14 KB</span>
+        </a>
+
+        <a class="dl-btn" href="fonts/Viks-Regular.ttf" download>
+          <span class="dl-fmt">TTF</span>
+          <span class="dl-for">Word, Canva, older apps</span>
+          <span class="dl-size">14 KB</span>
+        </a>
+
+        <a class="dl-btn" href="fonts/Viks-Regular.woff2" download>
+          <span class="dl-fmt">WOFF2</span>
+          <span class="dl-for">For your own websites</span>
+          <span class="dl-size">8 KB</span>
+        </a>
+      </div>
+
+      <details class="dl-help">
+        <summary>How to install it</summary>
+        <p><b>Windows:</b> right click the otf file, then Install. <b>Mac:</b> double click it, then Add Font. <b>Web:</b> drop the woff2 next to your CSS and point an @font-face rule at it.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="foot-hand">Made by hand, then by keyboard.</p>
+    <p class="foot-meta">Viks Regular &middot; otf, ttf, woff2</p>
+  </footer>
+
+  <!-- Download confirm popup -->
+  <div class="modal-backdrop" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+
+      <h2 class="modal-title" id="modalTitle">Are you sure?</h2>
+
+      <p class="modal-text">
+        You can have it, of course. It is free. But if it made you smile even a little,
+        you could UPI me instead.
+      </p>
+
+      <!-- ↓↓↓ PUT YOUR REAL UPI ID HERE ↓↓↓ -->
+      <div class="upi">
+        <code class="upi-id" id="upiId">yourname@upi</code>
+        <button class="upi-copy" id="upiCopy" type="button">copy</button>
+      </div>
+      <!-- ↑↑↑ PUT YOUR REAL UPI ID HERE ↑↑↑ -->
+
+      <div class="modal-actions">
+        <button class="btn-ghost" id="modalCancel" type="button">Maybe later</button>
+        <a class="btn-primary" id="modalConfirm" href="#" download>Yes, download it</a>
+      </div>
+
+      <p class="modal-file" id="modalFile"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
