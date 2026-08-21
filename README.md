@@ -1,6 +1,11 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <img src="assets/banner-light.svg" alt="Viks, my handwriting turned into a font" width="523">
+</picture>
+
 # Viks
 
-My handwriting, turned into a font you can type with. This repo holds the font files and the single-page site that lets you try them before downloading.
+This repo holds the font files and the single-page site that lets you try them before downloading.
 
 ## What's actually in the font
 
