@@ -23,7 +23,7 @@ Drawn on a Calligraphr template, scanned back in, exported to three formats:
 
 ## The site
 
-Four things: `index.html`, `style.css`, `script.js`, and `fonts/`. No build step and no dependencies. Double-click `index.html` and it runs, though the copy-UPI button needs a real origin because `navigator.clipboard` refuses to work on `file://`; there's a `document.execCommand` fallback, but a local server is cleaner:
+Four things: `index.html`, `style.css`, `script.js`, and `fonts/`. No build step and no dependencies. Double-click `index.html` and it runs, fonts and all. If you'd rather serve it:
 
 ```bash
 python -m http.server 8000
@@ -38,7 +38,6 @@ What's on the page:
 - A clickable grid of every glyph, which appends to the sample
 - Specimen rows at four sizes, and cards on where the font works and where it falls apart
 - Dark mode, stored in `localStorage` under the key `viks-theme`
-- A confirm dialog on every download link that asks for a UPI tip first, with focus trapping and Escape to close
 
 ## Using it on a page of your own
 
@@ -60,8 +59,6 @@ h1 { font-family: "Viks", ui-sans-serif, system-ui, sans-serif; }
 Right-click the `.otf` on Windows and pick Install. On a Mac, double-click it and hit Add Font.
 
 ## Before this goes public
-
-`index.html` still has `yourname@upi` sitting in the download dialog as a placeholder. Search for `upi-id` and swap in the real one, or delete that block if you'd rather not ask.
 
 There's no LICENSE file yet. The site says the font is free to use, which isn't the same as a license anyone can rely on, so pick one and commit it.
 
